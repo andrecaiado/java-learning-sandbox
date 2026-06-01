@@ -1,0 +1,12 @@
+{
+  "current_status": {
+    "last_completed_milestone": "None",
+    "assigned_tier": "Not Evaluated",
+    "streak_days": 0
+  },
+  "engineering_metrics": {
+    "strengths": [],
+    "active_struggles": [],
+    "technical_debt": []
+  }
+}

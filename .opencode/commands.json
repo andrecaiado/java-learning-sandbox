@@ -1,0 +1,25 @@
+{
+  "commands": {
+    "start-training": {
+      "description": "Spins up an isolated branch named with the current date and time",
+      "steps": [
+        "git checkout main",
+        "git checkout -b training-$(date +%Y%m%d-%H%M%S)",
+        "echo 'Branch created. Please tell OpenCode in the chat: Initiate the interview.'"
+      ]
+    },
+    "hint": {
+      "description": "Requests a tier-appropriate conceptual clue without exposing the code solution",
+      "prompt": "I am stuck on the current exercise. Based on my interview level recorded in .opencode/session.json, provide a conceptual hint or architectural advice. Do not reveal any code solutions."
+    },
+    "submit-exercise": {
+      "description": "Compiles code, runs tests, and creates a local atomic commit",
+      "steps": [
+        "mvn test",
+        "git add .",
+        "bash -c 'git commit -m \"feat: complete daily automated training exercise\"'",
+        "echo 'Progress securely committed locally!'"
+      ]
+    }
+  }
+}
