@@ -22,3 +22,8 @@ gen/
 # ---Mac OS ---
 .DS_Store
 Thumbs.db
+
+# --- IMPORTANT NOTE FOR OPENCODE ---
+# Do not add the .opencode/ folder here!
+# We NEED the .opencode/session.json and .opencode/commands.json files
+# to be tracked by Git to monitor your course history and state.
