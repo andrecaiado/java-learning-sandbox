@@ -20,6 +20,7 @@ The bootcamp relies on a unified, long-term codebase architecture where the AI m
 The workspace is configured with native OpenCode shortcuts to streamline your daily engineering habits straight from the chat interface:
 
 *   **`/start-training`**: Switches to `main`, pulls the latest infrastructure templates, spins up an isolated timestamped branch (`training-YYYYMMDD-HHMMSS`), and alerts the mentor to begin the technical placement evaluation.
+*   **`/resume-training`**: Restores the mentor's context by analyzing your active codebase, `progress.md` checkboxes, and `session.json` history metrics if you close and reopen the app mid-exercise.
 *   **`/hint`**: Requests a tier-appropriate conceptual clue or architectural guidance when stuck on an exercise, preventing code spoiling.
 *   **`/submit-exercise`**: Compiles code, runs Maven unit tests (`mvn test`), and auto-commits your successful daily implementation using clean *Conventional Commits* standards.
 
@@ -27,7 +28,7 @@ The workspace is configured with native OpenCode shortcuts to streamline your da
 
 ## 🔄 Daily Git Workflow & Repository Guidelines
 
-To maintain an clean, professional environment that can be securely "reset" or reviewed at any time, we enforce strict Git patterns:
+To maintain a clean, professional environment that can be securely "reset" or reviewed at any time, we enforce strict Git patterns:
 
 1.  **`main` is Sacred**: The primary branch contains only the clean, empty infrastructure templates (`pom.xml`, configurations, and this README). Never write feature code directly on `main`.
 2.  **Total Isolation**: Every single learning run takes place inside its own dedicated branch spawned by `/start-training`.
@@ -45,3 +46,21 @@ To maintain an clean, professional environment that can be securely "reset" or r
    /start-training
    ```
 4. Respond to your mentor's automated message with: *"I'm ready. Please initiate the 5-question interview."*
+
+---
+
+## 💡 Configuration Updates Mid-Training
+
+If you need to update the global infrastructure or behavior of your mentor mid-training, switch to `main`, apply the updates, commit, and rebase your training branch.
+
+⚠️ **CRITICAL RULES:**
+*   **NEVER commit your training progress or evaluation state to `main`.**
+*   **ONLY allow these configuration files to be committed to `main`:**
+   1.  `opencode.json` (Shortcut menus)
+   2.  `agents.md` (Mentor rules)
+   3.  `progress.md` (Syllabus checklist)
+   4.  `README.md` (Documentation)
+   5.  `pom.xml` (Dependencies)
+*   **ALWAYS keep these files isolated inside your training branches:**
+   *   `.opencode/session.json` (Your personal progress state)
+   *   `src/main/` and `src/test/` (All your daily exercise code)

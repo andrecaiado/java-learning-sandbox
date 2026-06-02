@@ -6,6 +6,11 @@
       "template": "I am ready to start my training lifecycle. Run a local bash script to execute these sequential steps precisely:\n1. git checkout main\n2. git checkout -b training-$(date +%Y%m%d-%H%M%S)\nThen, read my agents.md rules and explicitly tell me: 'Branch created. Initiate the interview.'",
       "agent": "build"
     },
+    "resume-training": {
+      "description": "Restores the mentor's context by analyzing the active codebase and session metrics",
+      "template": "I am resuming my daily training session on this active branch. Please read my .opencode/session.json file from disk, look at my progress.md checklist, and scan my current Java codebase in src/main/java/com/bootcamp/ to understand my pending implementation. Tell me exactly what my current task is and where I should focus right now.",
+      "agent": "plan"
+    },
     "hint": {
       "description": "Requests a tier-appropriate conceptual clue without exposing the code solution",
       "template": "I am stuck on the current exercise. Based on my interview level recorded in .opencode/session.json, provide a conceptual hint or architectural advice. Do not reveal any code solutions.",
