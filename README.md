@@ -56,14 +56,14 @@ If you need to update the global infrastructure or behavior of your mentor mid-t
 
 ⚠️ **CRITICAL RULES:**
 
-* **NEVER commit your training progress or evaluation state to `main`.**
-
-* **ONLY allow these configuration files to be committed to `main`:**
-  *  `opencode.json` (Shortcut menus)
-  *  `agents.md` (Mentor rules)
-  *  `progress.md` (Syllabus checklist)
-  *  `README.md` (Documentation)
-  *  `pom.xml` (Dependencies)
+*   **NEVER commit your personal checkmarks, training progress, or evaluation state to `main`.**
+*   **ONLY allow these configuration files to be committed to `main`:**
+    *  `opencode.json` (Shortcut menus)
+    *  `agents.md` (Mentor rules)
+    *  `progress.md` (**Only commit to main if making updates to the global roadmap/syllabus template!**)
+    *  `README.md` (Documentation)
+    *  `pom.xml` (Dependencies)
 * **ALWAYS keep these files isolated inside your training branches:**
-  *   `.opencode/session.json` (Your personal progress state)
-  *   `src/main/` and `src/test/` (All your daily exercise code)
+    *  `progress.md` (When checking off `[x]` boxes for completed exercises)
+    *  `.opencode/session.json` (Your personal progress state)
+    *  `src/main/` and `src/test/` (All your ongoing exercise code)
