@@ -40,12 +40,13 @@ To maintain a clean, professional environment that can be securely "reset" or re
 ## 🚀 Getting Started
 
 1. Ensure you have **Java 25 (Eclipse Temurin)** and **Maven** correctly installed and configured globally on your system.
-2. Open this root directory inside **OpenCode**.
-3. In the OpenCode chat window, execute:
+2. Ensure you have **OpenCode** desktop application or CLI installed and actively configured with an AI model provider.
+3. Start OpenCode inside the project root directory.
+4. In the OpenCode chat window, execute:
    ```bash
    /start-training
    ```
-4. Respond to your mentor's automated message with: *"I'm ready. Please initiate the 5-question interview."*
+5. Respond to your mentor's automated message with: *"I'm ready. Please initiate the 5-question interview."*
 
 ---
 
@@ -54,13 +55,15 @@ To maintain a clean, professional environment that can be securely "reset" or re
 If you need to update the global infrastructure or behavior of your mentor mid-training, switch to `main`, apply the updates, commit, and rebase your training branch.
 
 ⚠️ **CRITICAL RULES:**
-*   **NEVER commit your training progress or evaluation state to `main`.**
-*   **ONLY allow these configuration files to be committed to `main`:**
-   1.  `opencode.json` (Shortcut menus)
-   2.  `agents.md` (Mentor rules)
-   3.  `progress.md` (Syllabus checklist)
-   4.  `README.md` (Documentation)
-   5.  `pom.xml` (Dependencies)
-*   **ALWAYS keep these files isolated inside your training branches:**
-   *   `.opencode/session.json` (Your personal progress state)
-   *   `src/main/` and `src/test/` (All your daily exercise code)
+
+* **NEVER commit your training progress or evaluation state to `main`.**
+
+* **ONLY allow these configuration files to be committed to `main`:**
+  *  `opencode.json` (Shortcut menus)
+  *  `agents.md` (Mentor rules)
+  *  `progress.md` (Syllabus checklist)
+  *  `README.md` (Documentation)
+  *  `pom.xml` (Dependencies)
+* **ALWAYS keep these files isolated inside your training branches:**
+  *   `.opencode/session.json` (Your personal progress state)
+  *   `src/main/` and `src/test/` (All your daily exercise code)
