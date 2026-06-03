@@ -4,7 +4,7 @@
 *   **Agent Guide**: Read this file to know which topic to inject next into the continuous codebase.
 
 ## 🟩 Milestone 1: Functional Programming Foundations
-*   [ ] Lambda Expressions & effectively final variable scoping
+*   [x] Lambda Expressions & effectively final variable scoping
 *   [ ] Standard Functional Interfaces (`Predicate`, `Function`, `Consumer`, `Supplier`)
 *   [ ] Custom Functional Interface Design (`@FunctionalInterface`)
 *   [ ] Primitive Functional Specializations vs Auto-boxing performance overhead
