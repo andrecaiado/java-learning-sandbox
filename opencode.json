@@ -18,7 +18,7 @@
     },
     "submit-exercise": {
       "description": "Compiles code, runs Maven tests, logs progress, and creates an atomic Git commit",
-      "template": "Validate my solution by performing these step-by-step local operations:\n1. Run the terminal command: mvn test\n2. If tests pass, stage all project files using: git add .\n3. Create a local git commit with the message: git commit -m 'feat: complete training exercise'\n4. Read the .opencode/session.json file from disk, update the 'last_completed_milestone' to reflect the completed topic, and save it back to disk.\n5. Print a final message to the user: 'Progress securely committed locally!'",
+      "template": "Validate my solution by performing these step-by-step local operations:\n1. Run the terminal command: mvn test\n2. If tests pass, read progress.md and mark the current completed exercise as [x]\n3. Read .opencode/session.json, update 'last_completed_milestone' to the completed topic name and increment 'sessions_completed' by 1, then save the file\n4. Stage all project files using: git add .\n5. Create a local git commit with a descriptive message: git commit -m 'feat: complete <topic name>'\n6. Print a final message to the user: 'Progress securely committed locally!'",
       "agent": "build"
     }
   }
