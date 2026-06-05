@@ -1,8 +1,8 @@
 {
   "current_status": {
-    "last_completed_milestone": "Lambda Expressions & effectively final variable scoping",
+    "last_completed_milestone": "Standard Functional Interfaces (Predicate, Function, Consumer, Supplier)",
     "assigned_tier": "junior",
-    "sessions_completed": 0
+    "sessions_completed": 1
   },
   "engineering_metrics": {
     "strengths": [],
