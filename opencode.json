@@ -7,8 +7,8 @@
       "agent": "build"
     },
     "resume-training": {
-      "description": "Restores the mentor's context by analyzing the active codebase and session metrics",
-      "template": "I am resuming my daily training session on this active branch. Please read my .opencode/session.json file from disk, look at my progress.md checklist, and scan my current Java codebase in src/main/java/com/bootcamp/ to understand my pending implementation. Tell me exactly what my current task is and where I should focus right now.",
+      "description": "Restores the mentor's context by analyzing the active codebase and session state",
+      "template": "I am resuming my training session on this active branch. Please read my .opencode/session.json file from disk, look at my progress.md checklist, and scan my current Java codebase in src/main/java/com/bootcamp/ to understand my pending implementation. Tell me exactly what my current task is and where I should focus right now.",
       "agent": "plan"
     },
     "hint": {
@@ -18,7 +18,7 @@
     },
     "submit-exercise": {
       "description": "Compiles code, runs Maven tests, logs progress, and creates an atomic Git commit",
-      "template": "Validate my solution by performing these step-by-step local operations:\n1. Run the terminal command: mvn test\n2. If tests pass, stage all project files using: git add .\n3. Create a local git commit with the message: git commit -m 'feat: complete daily automated training exercise'\n4. Read the .opencode/session.json file from disk, update the 'last_completed_milestone' to reflect today's completed topic, and save it back to disk.\n5. Print a final message to the user: 'Progress securely committed locally!'",
+      "template": "Validate my solution by performing these step-by-step local operations:\n1. Run the terminal command: mvn test\n2. If tests pass, stage all project files using: git add .\n3. Create a local git commit with the message: git commit -m 'feat: complete training exercise'\n4. Read the .opencode/session.json file from disk, update the 'last_completed_milestone' to reflect the completed topic, and save it back to disk.\n5. Print a final message to the user: 'Progress securely committed locally!'",
       "agent": "build"
     }
   }
