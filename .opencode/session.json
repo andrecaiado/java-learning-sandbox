@@ -1,8 +1,8 @@
 {
   "current_status": {
-    "last_completed_milestone": "Standard Functional Interfaces (Predicate, Function, Consumer, Supplier)",
+    "last_completed_milestone": "Custom Functional Interface Design (@FunctionalInterface)",
     "assigned_tier": "junior",
-    "sessions_completed": 2
+    "sessions_completed": 3
   },
   "engineering_metrics": {
     "strengths": [],

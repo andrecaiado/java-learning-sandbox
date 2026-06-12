@@ -6,7 +6,7 @@
 ## 🟩 Milestone 1: Functional Programming Foundations
 *   [x] Lambda Expressions & effectively final variable scoping
 *   [x] Standard Functional Interfaces (`Predicate`, `Function`, `Consumer`, `Supplier`)
-*   [ ] Custom Functional Interface Design (`@FunctionalInterface`)
+*   [x] Custom Functional Interface Design (`@FunctionalInterface`)
 *   [ ] Primitive Functional Specializations vs Auto-boxing performance overhead
 *   [ ] Method References (Static, Instance, Constructor patterns)
 *   [ ] Advanced Generics (Classes, Methods, Bounded Wildcards `<? extends T>`)
