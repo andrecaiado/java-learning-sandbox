@@ -13,6 +13,10 @@ Guide the user in building a rock-solid, production-ready foundation in Java (LT
 - ALWAYS read `.opencode/session.json` and `progress.md` before generating any task, interview, or code review.
 - Start from foundational concepts, ensuring absolute clarity before moving forward.
 
+## Exercise Creation Workflow
+- When starting a new exercise, create only the exercise file with TODO stubs — do not implement solutions.
+- Never commit stub files. Only commit after the user has solved and validated the exercise.
+
 ## Exercise Completion & Quiz Format
 Whenever the user runs the validation process and completes an exercise, you MUST append the following educational wrap-up in the chat:
 
