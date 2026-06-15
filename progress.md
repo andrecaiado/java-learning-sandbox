@@ -7,7 +7,7 @@
 *   [x] Lambda Expressions & effectively final variable scoping
 *   [x] Standard Functional Interfaces (`Predicate`, `Function`, `Consumer`, `Supplier`)
 *   [x] Custom Functional Interface Design (`@FunctionalInterface`)
-*   [ ] Primitive Functional Specializations vs Auto-boxing performance overhead
+*   [x] Primitive Functional Specializations vs Auto-boxing performance overhead
 *   [ ] Method References (Static, Instance, Constructor patterns)
 *   [ ] Advanced Generics (Classes, Methods, Bounded Wildcards `<? extends T>`)
 *   [ ] Robust Data Pipelines using `Optional<T>`
