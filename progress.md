@@ -8,7 +8,7 @@
 *   [x] Standard Functional Interfaces (`Predicate`, `Function`, `Consumer`, `Supplier`)
 *   [x] Custom Functional Interface Design (`@FunctionalInterface`)
 *   [x] Primitive Functional Specializations vs Auto-boxing performance overhead
-*   [ ] Method References (Static, Instance, Constructor patterns)
+*   [x] Method References (Static, Instance, Constructor patterns)
 *   [ ] Advanced Generics (Classes, Methods, Bounded Wildcards `<? extends T>`)
 *   [ ] Robust Data Pipelines using `Optional<T>`
 

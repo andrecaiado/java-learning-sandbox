@@ -1,8 +1,8 @@
 {
   "current_status": {
-    "last_completed_milestone": "Primitive Functional Specializations vs Auto-boxing",
+    "last_completed_milestone": "Method References (Static, Instance, Constructor patterns)",
     "assigned_tier": "junior",
-    "sessions_completed": 4
+    "sessions_completed": 5
   },
   "engineering_metrics": {
     "strengths": [],
