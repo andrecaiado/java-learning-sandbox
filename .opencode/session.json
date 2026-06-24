@@ -1,8 +1,8 @@
 {
   "current_status": {
-    "last_completed_milestone": "Method References (Static, Instance, Constructor patterns)",
+    "last_completed_milestone": "Advanced Generics (Classes, Methods, Bounded Wildcards `<? extends T>`)",
     "assigned_tier": "junior",
-    "sessions_completed": 5
+    "sessions_completed": 6
   },
   "engineering_metrics": {
     "strengths": [],
