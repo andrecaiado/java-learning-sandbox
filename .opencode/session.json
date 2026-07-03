@@ -1,8 +1,8 @@
 {
   "current_status": {
-    "last_completed_milestone": "Immutable Data Carriers using `Records`",
+    "last_completed_milestone": "Structural Deconstruction with `Record Patterns`",
     "assigned_tier": "junior",
-    "sessions_completed": 8
+    "sessions_completed": 10
   },
   "engineering_metrics": {
     "strengths": [],

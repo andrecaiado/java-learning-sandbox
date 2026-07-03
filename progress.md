@@ -14,7 +14,7 @@
 
 ## 🟨 Milestone 2: Modern Data Modelling & Control Flow
 *   [x] Immutable Data Carriers using `Records` (Validation & compact constructors)
-*   [ ] Structural Deconstruction with `Record Patterns`
+*   [x] Structural Deconstruction with `Record Patterns`
 *   [ ] Pattern Matching for standard `Switch Expressions`
 *   [ ] Complex Type Guarding (`Pattern Matching for switch` using `when`)
 *   [ ] Algebraic Data Types using `Sealed Classes and Interfaces`
