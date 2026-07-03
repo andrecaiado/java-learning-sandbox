@@ -1,8 +1,8 @@
 {
   "current_status": {
-    "last_completed_milestone": "Robust Data Pipelines using `Optional<T>`",
+    "last_completed_milestone": "Immutable Data Carriers using `Records`",
     "assigned_tier": "junior",
-    "sessions_completed": 7
+    "sessions_completed": 8
   },
   "engineering_metrics": {
     "strengths": [],
