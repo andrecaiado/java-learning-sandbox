@@ -1,8 +1,8 @@
 {
   "current_status": {
-    "last_completed_milestone": "Structural Deconstruction with `Record Patterns`",
+    "last_completed_milestone": "Pattern Matching for standard `Switch Expressions`",
     "assigned_tier": "junior",
-    "sessions_completed": 10
+    "sessions_completed": 11
   },
   "engineering_metrics": {
     "strengths": [],

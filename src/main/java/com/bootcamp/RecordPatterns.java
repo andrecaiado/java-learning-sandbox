@@ -119,8 +119,7 @@ public class RecordPatterns {
     return switch (obj) {
       case Order(String id, double total, String status) when total > 100 ->
           "Premium order " + id + ": $" + total;
-      case Order(String id, double total, String status) ->
-          "Regular order " + id + ": $" + total;
+      case Order(String id, double total, String status) -> "Regular order " + id + ": $" + total;
       default -> "Not an order";
     };
   }
