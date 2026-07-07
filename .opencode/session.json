@@ -1,8 +1,8 @@
 {
   "current_status": {
-    "last_completed_milestone": "Pattern Matching for standard `Switch Expressions`",
+    "last_completed_milestone": "Complex Type Guarding (`Pattern Matching for switch` using `when`)",
     "assigned_tier": "junior",
-    "sessions_completed": 11
+    "sessions_completed": 12
   },
   "engineering_metrics": {
     "strengths": [],
