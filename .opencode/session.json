@@ -1,8 +1,8 @@
 {
   "current_status": {
-    "last_completed_milestone": "Complex Type Guarding (`Pattern Matching for switch` using `when`)",
+    "last_completed_milestone": "Algebraic Data Types using `Sealed Classes and Interfaces`",
     "assigned_tier": "junior",
-    "sessions_completed": 12
+    "sessions_completed": 13
   },
   "engineering_metrics": {
     "strengths": [],
