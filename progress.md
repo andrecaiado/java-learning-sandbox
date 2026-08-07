@@ -18,7 +18,7 @@
 *   [x] Pattern Matching for standard `Switch Expressions`
 *   [x] Complex Type Guarding (`Pattern Matching for switch` using `when`)
 *   [x] Algebraic Data Types using `Sealed Classes and Interfaces`
-*   [ ] Sequenced Collections Architecture (`SequencedList`, `SequencedSet`, `SequencedMap`)
+*   [x] Sequenced Collections Architecture (`SequencedList`, `SequencedSet`, `SequencedMap`)
 *   [ ] Text Blocks & Unnamed Variables syntax optimizations
 
 ## 🟦 Milestone 3: High-Performance Stream Engineering

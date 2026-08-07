@@ -1,8 +1,8 @@
 {
   "current_status": {
-    "last_completed_milestone": "Algebraic Data Types using `Sealed Classes and Interfaces`",
+    "last_completed_milestone": "Sequenced Collections Architecture",
     "assigned_tier": "junior",
-    "sessions_completed": 13
+    "sessions_completed": 14
   },
   "engineering_metrics": {
     "strengths": [],
