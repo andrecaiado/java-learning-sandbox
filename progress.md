@@ -19,7 +19,7 @@
 *   [x] Complex Type Guarding (`Pattern Matching for switch` using `when`)
 *   [x] Algebraic Data Types using `Sealed Classes and Interfaces`
 *   [x] Sequenced Collections Architecture (`SequencedList`, `SequencedSet`, `SequencedMap`)
-*   [ ] Text Blocks & Unnamed Variables syntax optimizations
+*   [x] Text Blocks & Unnamed Variables syntax optimizations
 
 ## 🟦 Milestone 3: High-Performance Stream Engineering
 *   [ ] Lazy Evaluation Mechanics in Stream Intermediate Operations
