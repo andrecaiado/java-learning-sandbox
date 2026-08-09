@@ -1,12 +1,11 @@
 package com.bootcamp;
 
+import static java.util.stream.Collectors.toList;
+
 import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
-import static java.util.stream.Collectors.toList;
 
 /**
  * Exercise: Lazy Evaluation Mechanics in Stream Intermediate Operations
@@ -68,10 +67,10 @@ public class StreamLazyEvaluation {
   //         Use limit() to cap the infinite stream.
   //         Example: N=7 -> [0, 1, 1, 2, 3, 5, 8]
   public static List<Integer> fibonacci(int n) {
-      return Stream.iterate(new int[]{0, 1}, pair -> new int[]{pair[1], pair[0] + pair[1]})
-              .map(pair -> pair[0])
-              .limit(n)
-              .toList();
+    return Stream.iterate(new int[] {0, 1}, pair -> new int[] {pair[1], pair[0] + pair[1]})
+        .map(pair -> pair[0])
+        .limit(n)
+        .toList();
   }
 
   // TODO 6: Demonstrate lazy evaluation by counting how many times filter() is called.
@@ -79,9 +78,9 @@ public class StreamLazyEvaluation {
   //         Use peek() before filter() to count invocations.
   //         Example: [1, 2, 3, 4, 5] -> 5 (filter called 5 times)
   public static long countFilterInvocations(List<Integer> numbers) {
-      long[] count = {0};
-      List<Integer> list = numbers.stream().peek(n -> count[0]++).filter(n -> n > 0).toList();
-      return count[0];
+    long[] count = {0};
+    List<Integer> list = numbers.stream().peek(n -> count[0]++).filter(n -> n > 0).toList();
+    return count[0];
   }
 
   // TODO 7: Use skip() and limit() to implement pagination.
@@ -95,7 +94,10 @@ public class StreamLazyEvaluation {
   //         Stream.generate(), filter out duplicates (distinct), and return the
   //         first 10 unique values as a list.
   public static List<Integer> tenUniqueRandoms() {
-    return Stream.generate(() -> ThreadLocalRandom.current().nextInt(1, 101)).distinct().limit(10).toList();
+    return Stream.generate(() -> ThreadLocalRandom.current().nextInt(1, 101))
+        .distinct()
+        .limit(10)
+        .toList();
   }
 
   public static void main(String[] args) {
