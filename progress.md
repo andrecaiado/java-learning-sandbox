@@ -23,7 +23,7 @@
 
 ## 🟦 Milestone 3: High-Performance Stream Engineering
 *   [x] Lazy Evaluation Mechanics in Stream Intermediate Operations
-*   [ ] Advanced Reductions, Custom Collectors, and Grouping Operations
+*   [x] Advanced Reductions, Custom Collectors, and Grouping Operations
 *   [ ] FlatMapping complex nested data topologies
 *   [ ] Parallel Streams execution models and thread-safety pitfalls
 *   [ ] Stream processing customization using advanced Stream Gatherers

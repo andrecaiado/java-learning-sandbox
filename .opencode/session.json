@@ -1,8 +1,8 @@
 {
   "current_status": {
-    "last_completed_milestone": "Lazy Evaluation Mechanics in Stream Intermediate Operations",
+    "last_completed_milestone": "Advanced Reductions, Custom Collectors, and Grouping Operations",
     "assigned_tier": "junior",
-    "sessions_completed": 16
+    "sessions_completed": 17
   },
   "engineering_metrics": {
     "strengths": [],
