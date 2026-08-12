@@ -76,7 +76,9 @@ public class FlatMapping {
   //         and collect distinct characters into a Set<Character>.
   //         Example: [["Apple","Banana"], ["Avocado"]] -> {'A', 'B'}
   public static Set<Character> distinctFirstChars(List<List<String>> nestedWords) {
-    return nestedWords.stream().flatMap(wl -> wl.stream().flatMap(w -> Stream.of(w.charAt(0)))).collect(Collectors.toSet());
+    return nestedWords.stream()
+        .flatMap(wl -> wl.stream().flatMap(w -> Stream.of(w.charAt(0))))
+        .collect(Collectors.toSet());
   }
 
   // TODO 8: Flatten nested integer lists and compute the sum of all elements.
@@ -91,8 +93,8 @@ public class FlatMapping {
   //         Example: [[1,2], [3,4]] -> {odd=[1,3], even=[2,4]}
   public static Map<String, List<Integer>> flattenThenGroupByParity(List<List<Integer>> nested) {
     return nested.stream()
-            .flatMap(Collection::stream)
-            .collect(Collectors.groupingBy(i -> i % 2 == 0 ? "even" : "odd"));
+        .flatMap(Collection::stream)
+        .collect(Collectors.groupingBy(i -> i % 2 == 0 ? "even" : "odd"));
   }
 
   // TODO 10: Flatten three levels of nesting into a single list.
@@ -100,7 +102,9 @@ public class FlatMapping {
   //          Use two chained flatMap() calls.
   //          Example: [[[1,2],[3]],[[4,5]]] -> [1, 2, 3, 4, 5]
   public static List<Integer> flattenDeep(List<List<List<Integer>>> deepNested) {
-    return deepNested.stream().flatMap( l1 -> l1.stream().flatMap( Collection::stream)).collect(toList());
+    return deepNested.stream()
+        .flatMap(l1 -> l1.stream().flatMap(Collection::stream))
+        .collect(toList());
   }
 
   public static void main(String[] args) {
