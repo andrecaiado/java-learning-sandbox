@@ -1,8 +1,8 @@
 {
   "current_status": {
-    "last_completed_milestone": "Advanced Reductions, Custom Collectors, and Grouping Operations",
+    "last_completed_milestone": "FlatMapping complex nested data topologies",
     "assigned_tier": "junior",
-    "sessions_completed": 17
+    "sessions_completed": 18
   },
   "engineering_metrics": {
     "strengths": [],
