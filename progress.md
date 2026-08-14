@@ -29,8 +29,8 @@
 *   [ ] Stream processing customization using advanced Stream Gatherers
 
 ## 🟪 Milestone 4: Architectural Design Patterns (Modern Implementations)
-*   [x] Functional **Strategy Pattern** leveraging native lambdas
-*   [ ] Type-Safe **Factory Pattern** using Sealed hierarchies and Switch expressions
+*   [ ] Functional **Strategy Pattern** leveraging native lambdas (TODOs 1-7 done, 8-10 pending)
+*   [ ] Type-Safe **Factory Pattern** using Sealed hierarchies and Switch expressions (IN PROGRESS)
 *   [ ] Immutable **Builder Pattern** optimization using Records
 *   [ ] Decoupled execution models using **State & Command Patterns**
 
