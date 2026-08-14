@@ -5,6 +5,7 @@ import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -147,7 +148,10 @@ public class StrategyPattern {
   //         Compose both: first double, then clamp.
   //         Example: [50, 60, 80, 120] -> [100, 100, 100, 100]
   public static List<Integer> composeUnaryOperators(List<Integer> numbers) {
-    throw new UnsupportedOperationException("Implement TODO 8");
+    Function<Integer, Integer> doubler = n -> n * 2;
+    Function<Integer, Integer> clamper = n -> Math.min(n, 100);
+    Function<Integer, Integer> pipeline = doubler.andThen(clamper);
+    return numbers.stream().map(pipeline).toList();
   }
 
   // TODO 9: Implement a strategy pattern with an accumulator.
@@ -156,7 +160,15 @@ public class StrategyPattern {
   //         Test with: max strategy, min strategy, sum strategy.
   //         Return a Map<String, Integer> with keys "max", "min", "sum".
   public static Map<String, Integer> reduceWithStrategies(List<Integer> numbers) {
-    throw new UnsupportedOperationException("Implement TODO 9");
+    BinaryOperator<Integer> maxStrategy = BinaryOperator.maxBy(Integer::compareTo);
+    BinaryOperator<Integer> minStrategy = BinaryOperator.minBy(Integer::compareTo);
+    BinaryOperator<Integer> sumStrategy = Integer::sum;
+    
+    return Map.of(
+        "max", numbers.stream().reduce(maxStrategy).orElse(0),
+        "min", numbers.stream().reduce(minStrategy).orElse(0),
+        "sum", numbers.stream().reduce(0, sumStrategy)
+    );
   }
 
   // TODO 10: Real-world use case — a discount strategy chain.
@@ -167,7 +179,9 @@ public class StrategyPattern {
   //          Return the final price after all discounts.
   public static double applyDiscountChain(
       double basePrice, List<Function<Double, Double>> discounts) {
-    throw new UnsupportedOperationException("Implement TODO 10");
+    return discounts.stream()
+        .reduce(Function.identity(), Function::andThen)
+        .apply(basePrice);
   }
 
   public static void main(String[] args) {
