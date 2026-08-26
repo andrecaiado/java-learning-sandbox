@@ -5,7 +5,6 @@ import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.Predicate;
-import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -124,20 +123,21 @@ public class StrategyPattern {
   //         Rules: "notNull" (not null), "hasAt" (contains @), "hasDomain" (contains .)
   public static List<String> validateEmails(List<String> emails) {
     BinaryOperator<Predicate<String>> combiner = Predicate::and;
-    BiFunction<String, String, Boolean> validator = (email, ruleName) ->
-      switch(ruleName) {
-        case "notNull" -> email != null;
-        case "hasAt" -> email.contains("@");
-        case "hasDomain" -> email.contains(".");
-        default -> false;
-    };
+    BiFunction<String, String, Boolean> validator =
+        (email, ruleName) ->
+            switch (ruleName) {
+              case "notNull" -> email != null;
+              case "hasAt" -> email.contains("@");
+              case "hasDomain" -> email.contains(".");
+              default -> false;
+            };
     Predicate<String> validateNotNull = s -> validator.apply(s, "notNull");
     Predicate<String> validateHasAt = s -> validator.apply(s, "hasAt");
     Predicate<String> validateHasDomain = s -> validator.apply(s, "hasDomain");
 
     List<Predicate<String>> rules = List.of(validateNotNull, validateHasAt, validateHasDomain);
     Predicate<String> combined =
-            rules.stream().reduce(combiner).orElse(w -> true); // default: accept all
+        rules.stream().reduce(combiner).orElse(w -> true); // default: accept all
 
     return emails.stream().filter(combined).toList();
   }
@@ -163,12 +163,11 @@ public class StrategyPattern {
     BinaryOperator<Integer> maxStrategy = BinaryOperator.maxBy(Integer::compareTo);
     BinaryOperator<Integer> minStrategy = BinaryOperator.minBy(Integer::compareTo);
     BinaryOperator<Integer> sumStrategy = Integer::sum;
-    
+
     return Map.of(
         "max", numbers.stream().reduce(maxStrategy).orElse(0),
         "min", numbers.stream().reduce(minStrategy).orElse(0),
-        "sum", numbers.stream().reduce(0, sumStrategy)
-    );
+        "sum", numbers.stream().reduce(0, sumStrategy));
   }
 
   // TODO 10: Real-world use case — a discount strategy chain.
@@ -179,9 +178,7 @@ public class StrategyPattern {
   //          Return the final price after all discounts.
   public static double applyDiscountChain(
       double basePrice, List<Function<Double, Double>> discounts) {
-    return discounts.stream()
-        .reduce(Function.identity(), Function::andThen)
-        .apply(basePrice);
+    return discounts.stream().reduce(Function.identity(), Function::andThen).apply(basePrice);
   }
 
   public static void main(String[] args) {
@@ -224,7 +221,8 @@ public class StrategyPattern {
     System.out.println();
 
     List<String> emails =
-            Arrays.asList("alice@example.com", "bob@", "charlie", "diana@test.org", null, "eve@valid.io");
+        Arrays.asList(
+            "alice@example.com", "bob@", "charlie", "diana@test.org", null, "eve@valid.io");
     System.out.println("TODO 7 - Validate Emails:");
     System.out.println(validateEmails(emails));
     System.out.println();

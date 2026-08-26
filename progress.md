@@ -30,7 +30,7 @@
 
 ## 🟪 Milestone 4: Architectural Design Patterns (Modern Implementations)
 *   [ ] Functional **Strategy Pattern** leveraging native lambdas (TODOs 1-7 done, 8-10 pending)
-*   [ ] Type-Safe **Factory Pattern** using Sealed hierarchies and Switch expressions (IN PROGRESS)
+*   [x] Type-Safe **Factory Pattern** using Sealed hierarchies and Switch expressions
 *   [ ] Immutable **Builder Pattern** optimization using Records
 *   [ ] Decoupled execution models using **State & Command Patterns**
 
